@@ -62,3 +62,20 @@ int main(int argc, char* argv[])
 
     return 0;
 }
+
+
+/*
+What Happens Here
+AppClient implements OmmConsumerClient and overrides:
+
+onRefreshMsg → prints initial snapshot of data.
+
+onUpdateMsg → prints streaming updates (quotes, trades, etc.).
+
+onStatusMsg → prints status (e.g., item not found, permission denied).
+
+consumer.registerClient(req, client) sends the request and attaches your callback.
+
+You’ll see raw EMA messages printed to stdout (field IDs, values, etc.).
+
+*/
