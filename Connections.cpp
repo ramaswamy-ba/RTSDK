@@ -1,5 +1,5 @@
 OmmConsumerConfig config;
-config.operationModel(OmmConsumerConfig::OperationModel::API_DISPATCH);
+config.operationModel(OmmConsumerConfig::OperationModel::API_DISPATCH); // USER_DISPATCH
 
 OmmConsumer consumer1(config.host("server1:14002").username("user1"));
 OmmConsumer consumer2(config.host("server2:14002").username("user2"));
